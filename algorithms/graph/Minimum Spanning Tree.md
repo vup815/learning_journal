@@ -32,4 +32,4 @@ return len(mst) == n - 1
 * Therefore the time complexity is O(E log E + E) = O(E log E)
 
 **Space Complexity**: `O(V). V = number of vertices`
-* Keeping track of the root of every vertex in the union-find data structure requires O(V) space. 
+* Keeping track of *the root of every vertex in the union-find data structure requires O(V) space. 
