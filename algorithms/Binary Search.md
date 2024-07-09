@@ -20,7 +20,7 @@ def binary_search(nums, target):
 - `left_bound` is same as `bisect_left`
 - `right_bound` is same as `bisect_right`
 
-	```python
+```python
 def left_bound(nums, target):
 	l, r = 0, len(nums)
 	while l < r:
