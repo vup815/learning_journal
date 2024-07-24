@@ -12,18 +12,17 @@ A minimum spanning tree is a spanning tree with the minimum possible total edge 
 3. For each edge, verify whether the two vertices connected by the edges are already connected in the MST with 'Union Find'.
 
 **Pseudo Code**:
-```
+```python
 # n = number of vertices 
 edges.sort()
 uf = UF(n)
 mst = []
 
 for edge in edges:
-	u, v = edge
-	if not uf.connected(u, v):
-		 mst.add(edge)
-		 uf.union(u, v)
-   
+    u, v = edge
+    if not uf.connected(u, v):
+        mst.add(edge)
+        uf.union(u, v)
 return len(mst) == n - 1
 ```
 
@@ -46,19 +45,19 @@ return len(mst) == n - 1
 4. Add all the vertex which connects with the vertex.
 
 **Pseudo Code**:
-```
+```python
 # n = number of vertices 
 inTree = [False] * n
 priority_queue.append((0, start))
 mst = []
 
 while queue:
-	weight, node = priority_queue.pop()
-	mst.add(node)
-	inTree[node] = True
-	for w, adj in adjs[node]:
-		if not inTree[adj]:
-			queue.append((w, adj))
+    weight, node = priority_queue.pop()
+    mst.add(node)
+    inTree[node] = True
+    for w, adj in adjs[node]:
+        if not inTree[adj]:
+            queue.append((w, adj))
 ```
 
 **Time Complexity**:  `O(E  * log E), E = number of edges`

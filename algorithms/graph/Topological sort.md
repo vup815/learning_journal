@@ -12,17 +12,17 @@ The graph has to be `directed acyclic`.
 # queue = deque
 # n = number of node
 for i, degree in enumerate(indegree):
-	if degree == 0:
-		queue.append(i)
+    if degree == 0:
+        queue.append(i)
 count = 0
 t_sort = []
 while queue:
-	node = queue.popleft()
-	count += 1
-	t_sort.append(node)
-	for adj in adjs[node]:
-		indegree[adj] -= 1
-		if indegree[adj] == 0:
-			queue.append(adj)
+    node = queue.popleft()
+    count += 1
+    t_sort.append(node)
+    for adj in adjs[node]:
+        indegree[adj] -= 1
+        if indegree[adj] == 0:
+            queue.append(adj)
 return t_sort if count == n else []
 ```

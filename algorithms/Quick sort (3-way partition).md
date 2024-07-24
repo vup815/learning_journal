@@ -7,38 +7,37 @@
 - In function`partition`, because we swap `i` with `lt` first then increment them, we can make sure that our pivot is moved to the right position along the way. Some implementation will not swap the pivot in the loop, so they need to swap `lo` with `lt` after the while loop.
 ```python
 def quick_sort(nums):
-	n = len(nums)
-
-	def swap(nums, i, j):
-		nums[i], nums[j] = nums[j], nums[i]
-
-	def shuffle(nums):
-		for i in range(n):
-			swap(nums, i, random.randint(i, n-1))
-
-	def partition(nums, lo, hi):
-		pivot = nums[lo]
-		lt, gt = lo, hi-1
-		i = lt + 1
-		while i <= gt:
-			if nums[i] > pivot:
-				swap(nums, i, gt)
-				gt -= 1
-			elif nums[i] < pivot:
-				swap(nums, i, lt)
-				i += 1
-				lt += 1
-			else:
-				i += 1
-		return lt, gt
-
-	def sort(nums, lo, hi):
-		if lo + 1 >= hi:
-			return
-		lt, gt = partition(nums, lo, hi)
-		sort(nums, lo, lt)
-		sort(nums, gt+1, hi)
-
-	shuffle(nums)
-	sort(nums, 0, n)
+    n = len(nums)
+    def swap(nums, i, j):
+        nums[i], nums[j] = nums[j], nums[i]
+    
+    def shuffle(nums):
+        for i in range(n):
+            swap(nums, i, random.randint(i, n-1))
+    
+    def partition(nums, lo, hi):
+        pivot = nums[lo]
+        lt, gt = lo, hi-1
+        i = lt + 1
+        while i <= gt:
+            if nums[i] > pivot:
+                swap(nums, i, gt)
+                gt -= 1
+            elif nums[i] < pivot:
+                swap(nums, i, lt)
+                i += 1
+                lt += 1
+            else:
+                i += 1
+        return lt, gt
+    
+    def sort(nums, lo, hi):
+        if lo + 1 >= hi:
+            return
+        lt, gt = partition(nums, lo, hi)
+        sort(nums, lo, lt)
+        sort(nums, gt+1, hi)
+    
+    shuffle(nums)
+    sort(nums, 0, n)
 ```
