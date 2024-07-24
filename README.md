@@ -10,6 +10,7 @@ Welcome to my learning journal! This repository is where I document my learning 
 - [Merge Sort](https://github.com/vup815/learning_journal/blob/main/algorithms/merge%20sort.md)
 - [Monotonic Queue/Stack](https://github.com/vup815/learning_journal/blob/main/algorithms/monotonic.md)
 - [Quick Select](https://github.com/vup815/learning_journal/blob/main/algorithms/quick%20select.md)
+- [Quick Sort (3-ways partition)](https://github.com/vup815/learning_journal/blob/main/algorithms/Quick%20sort%20(3-way%20partition).md)
 
 ## Trees
 - [Binary Indexed Tree](https://github.com/vup815/learning_journal/blob/main/algorithms/tree/Binary%20Indexed%20Tree.md)
