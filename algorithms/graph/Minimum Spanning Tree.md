@@ -9,7 +9,7 @@ A minimum spanning tree is a spanning tree with the minimum possible total edge 
 **Approach**:
 1. Sort all the edges in the ascending order.
 2. Start adding the edges to MST.
-3. For each edge, verify whether the two vertices connected by the edges are already connected in the MST with 'Union Find'.
+3. For each edge, verify whether the two vertices connected by the edges are already connected in the MST with [[Disjoints set (union-find)]]
 
 **Pseudo Code**:
 ```python
@@ -61,8 +61,6 @@ while queue:
 ```
 
 **Time Complexity**:  `O(E  * log E), E = number of edges`
-* Time complexity of Priority Queue' add and pop operation is O(log E), and we need to do E times.
-
-
+* The time complexity of `priority queue` operation  O(log E), and we need to do E times.
 **Space Complexity**: `O(V). V = number of vertices`
 * We need to store V vertices in our data structure.
