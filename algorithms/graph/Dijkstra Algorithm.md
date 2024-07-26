@@ -19,7 +19,7 @@ def dijkstra(start):
                 heapq.heappush(pq, (distances[adj], adj))
 ```
 
-**Time Complexity**: O($v^2$ log v)
+**Time Complexity**: O($v^2$ $log {(v)}$)
 
-The time complexity of `priority queue` operation is `logarithmic` and we need to do at most 2e times operation (`enqueue` and `dequeue`). So we can simplify to  O(e log v) where e = number of edges and v = number of vertices.
-In worst case, e = v(v-1)/2 ~=  $v^2$, so we get O($v^2$ log v)  
+The time complexity of `priority queue` operation is `logarithmic` and we need to do at most 2 $\times$ e times operation (`enqueue` and `dequeue`). So we can simplify to  O(e  $log {(v)}$) where e = number of edges and v = number of vertices.
+In worst case, e = $\frac{v (v-1)}{2}$ ~=  $v^2$, so we get O($v^2$  $log {(v)}$)  

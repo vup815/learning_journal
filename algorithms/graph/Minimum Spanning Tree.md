@@ -26,12 +26,12 @@ for edge in edges:
 return len(mst) == n - 1
 ```
 
-**Time Complexity**:  `O(E  * log E), E = number of edges`
-* Sorting all the edges will take O(E log E) time.
-* For each edge, we check whether we can add it to the MST with Union Find, which takes O(1) time in average if we do path compression. So the process will take O(E) time.
-* Therefore the time complexity is O(E log E + E) = O(E log E)
+**Time Complexity**:  O(e $log{(e)}$), e $=$ number of edges
+* Sorting all the edges will take O(e $log{(e)}$) time.
+* For each edge, we check whether we can add it to the MST with Union Find, which takes O(1) time in average if we do path compression. So the process will take O(e) time.
+* Therefore the time complexity is O(e $log{(e)}$) + O(e) = O(e $log{(e)}$)
 
-**Space Complexity**: `O(V). V = number of vertices`
+**Space Complexity**: O(V). V = number of vertices
 * Keeping track of *the root of every vertex in the union-find data structure requires O(V) space. 
 
 #### Prim’s Algorithm:
@@ -60,7 +60,7 @@ while queue:
             queue.append((w, adj))
 ```
 
-**Time Complexity**:  `O(E  * log E), E = number of edges`
-* The time complexity of `priority queue` operation  O(log E), and we need to do E times.
-**Space Complexity**: `O(V). V = number of vertices`
+**Time Complexity**:  O(e $log{(e)}$), e $=$ number of edges
+* The time complexity of `priority queue` operation is O($log {(e)}$), and we need to do e times.
+**Space Complexity**: O(V). V = number of vertices
 * We need to store V vertices in our data structure.
