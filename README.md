@@ -20,6 +20,7 @@ Welcome to my learning journal! This repository is where I document my learning 
 - [Disjoints set (union-find)](https://github.com/vup815/learning_journal/blob/main/algorithms/graph/Disjoints%20set%20(union-find).md)
 - [Minimum Spanning Tree](https://github.com/vup815/learning_journal/blob/main/algorithms/graph/Minimum%20Spanning%20Tree.md)
 - [Topological sort](https://github.com/vup815/learning_journal/blob/main/algorithms/graph/Topological%20sort.md)
+- [Dijkstra Algorithm](https://github.com/vup815/learning_journal/blob/main/algorithms/graph/Dijkstra%20Algorithm.md)
 
 
 Feel free to explore these files to learn more about each topic. If you have any questions or suggestions, don't hesitate to open an issue or reach out!
