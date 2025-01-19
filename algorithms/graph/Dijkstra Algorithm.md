@@ -10,13 +10,14 @@ def dijkstra(start):
     distances[start] = 0
     pq = [(0, start)]
     while pq:
-        curr_w, curr_v = heapq.heappop(pq)
-        if distances[curr_v] < curr_w:
+        curr_node, curr_w = heapq.heappop(pq)
+        if distances[curr_node] < curr_w:
             continue
-        for adj, weight in adjs(curr_v):
-            if distances[adj] < distances[curr_v] + weight:
-                distances[adj] = distances[curr_v] + weight
-                heapq.heappush(pq, (distances[adj], adj))
+        for adj_node, weight in adjs(curr_node):
+            new_distance = distances[curr_node] + weight
+            if new_distance < distances[adj_node]:
+                distances[adj_node] = new_distance
+                heapq.heappush(pq, (adj, new_distance))
 ```
 
 **Time Complexity**: O($v^2$ $log {(v)}$)
